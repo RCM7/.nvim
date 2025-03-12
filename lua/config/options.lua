@@ -1,14 +1,56 @@
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2  
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-
--- Yanking works seamlessly with mac os clipboard
-vim.opt.clipboard = "unnamedplus"
-
--- Enable persistent undo
-local undo_dir = vim.fn.expand("~/.config/nvim/undodir")
-vim.opt.undofile = true
-vim.opt.undodir = undo_dir
-
-
+vim.opt.errorbells = false                                -- Disables error sounds
+vim.opt.showcmd = true                                    -- Shows command in status line
+vim.opt.backup = false                                    -- Disables backup files
+vim.opt.writebackup = false                               -- Disables backup before overwriting
+vim.opt.swapfile = false                                  -- Disables swap files
+vim.opt.splitright = true                                 -- Vertical splits to the right
+vim.opt.splitbelow = true                                 -- Horizontal splits below
+vim.opt.encoding = "UTF-8"                                -- UTF-8 encoding
+vim.opt.autowrite = true                                  -- Auto save on some commands
+vim.opt.number = true                                     -- Show line numbers
+vim.opt.incsearch = true                                  -- Show search results as you type
+vim.opt.modeline = true                                   -- Enable modeline
+vim.opt.smartindent = true                                -- Smart auto-indenting
+vim.opt.autoindent = true                                 -- Copy indent from current line
+vim.opt.complete = vim.opt.complete - "i"                 -- Don't scan included files for completion
+vim.opt.showmatch = true                                  -- Show matching brackets
+vim.opt.smarttab = true                                   -- Smart tab behavior
+vim.opt.expandtab = true                                  -- Use spaces instead of tabs
+vim.opt.tabstop = 2                                       -- Tabs are 2 spaces
+vim.opt.shiftwidth = 2                                    -- Indentation is 2 spaces
+vim.opt.nrformats = vim.opt.nrformats - "octal"           -- Remove octal from number formats
+vim.opt.shiftround = true                                 -- Round indent to multiple of shiftwidth
+vim.opt.timeout = false                                   -- No mapping timeout
+vim.opt.ttimeout = true                                   -- Key code timeout
+vim.opt.ttimeoutlen = 10                                  -- Key code timeout length
+vim.opt.timeoutlen = 500                                  -- Mapping timeout length
+vim.opt.signcolumn = "yes"                                -- Always show sign column
+vim.opt.complete = ".,w,b,u,t"                            -- Completion sources
+vim.opt.completeopt = "longest,menuone"                   -- Completion options
+vim.opt.hlsearch = true                                   -- Highlight search results
+vim.opt.mouse = "a"                                       -- Enable mouse in all modes
+vim.opt.title = true                                      -- Set window title
+vim.opt.laststatus = 2                                    -- Always show status line
+vim.opt.hidden = true                                     -- Allow hidden buffers
+vim.opt.showtabline = 2                                   -- Always show tab line
+vim.opt.wildmenu = true                                   -- Enhanced command completion
+vim.opt.backspace = "indent,eol,start"                    -- Backspace behavior
+vim.opt.ruler = true                                      -- Show cursor position
+vim.opt.showmode = false                                  -- Don't show mode (if using status line)
+vim.opt.ignorecase = true                                 -- Case insensitive search
+vim.opt.smartcase = true                                  -- Case sensitive when uppercase
+vim.opt.lazyredraw = true                                 -- Don't redraw during macros
+vim.opt.cursorcolumn = false                              -- No cursor column highlight
+vim.opt.cursorline = false                                -- No cursor line highlight
+vim.opt.synmaxcol = 300                                   -- Max column for syntax highlight
+vim.opt.re = 1                                            -- Syntax regexp engine (0=auto)
+vim.opt.fileformats = { "unix", "mac", "dos" }            -- File format priority
+vim.opt.conceallevel = 0                                  -- Text is shown normally
+vim.opt.wrap = true                                       -- Wrap long lines
+vim.opt.textwidth = 80                                    -- Max width of text
+vim.opt.formatoptions = "qrn1"                            -- Format options
+vim.opt.relativenumber = false                            -- No relative line numbers
+vim.opt.undofile = true                                   -- Persistent undo
+vim.opt.undodir = vim.fn.expand("~/.config/nvim/undodir") -- Directory for storing undo files
+vim.opt.colorcolumn = "120"                               -- Highlight column 80
+vim.opt.clipboard = "unnamed,unnamedplus"                 -- Use system clipboard
