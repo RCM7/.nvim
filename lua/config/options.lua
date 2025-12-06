@@ -52,5 +52,5 @@ vim.opt.formatoptions = "qrn1"                            -- Format options
 vim.opt.relativenumber = false                            -- No relative line numbers
 vim.opt.undofile = true                                   -- Persistent undo
 vim.opt.undodir = vim.fn.expand("~/.config/nvim/undodir") -- Directory for storing undo files
-vim.opt.colorcolumn = "120"                               -- Highlight column 80
+vim.opt.colorcolumn = "80"                                -- Highlight column 80
 vim.opt.clipboard = "unnamed,unnamedplus"                 -- Use system clipboard

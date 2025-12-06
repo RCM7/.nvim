@@ -152,6 +152,7 @@ return {
       }
     })
     lspconfig.ruff.setup({
+      cmd = { "ruff", "server", "--preview" },
       init_options = {
         settings = {
           -- Ruff settings
